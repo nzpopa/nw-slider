@@ -1,5 +1,6 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
+var PropTypes = require('prop-types');
 var isFunction = require('lodash/isFunction')
 var Draggable = require('react-draggable')
 var isUndefined = require('lodash/isUndefined')
@@ -9,15 +10,15 @@ module.exports = React.createClass({
   displayName: 'core-slider',
 
   propTypes: {
-    value: React.PropTypes.number,
-    min: React.PropTypes.number,
-    max: React.PropTypes.number,
-    ticks: React.PropTypes.bool,
-    triggerOnChangeWhileDragging: React.PropTypes.bool,
-    onChange: React.PropTypes.func,
-    onDragStart: React.PropTypes.func,
-    onDragEnd: React.PropTypes.func,
-    markerLabel: React.PropTypes.array
+    value: PropTypes.number,
+    min: PropTypes.number,
+    max: PropTypes.number,
+    ticks: PropTypes.bool,
+    triggerOnChangeWhileDragging: PropTypes.bool,
+    onChange: PropTypes.func,
+    onDragStart: PropTypes.func,
+    onDragEnd: PropTypes.func,
+    markerLabel: PropTypes.array
   },
 
   getDefaultProps: function () {

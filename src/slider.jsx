@@ -1,6 +1,7 @@
 var React = require('react')
 var Popover = require('./popover-follow')
 var Slider = require('./slider-core')
+var PropTypes = require('prop-types');
 var isFunction = require('lodash/isFunction')
 var classnames = require('classnames')
 var isUndefined = require('lodash/isUndefined')
@@ -8,16 +9,16 @@ var isUndefined = require('lodash/isUndefined')
 module.exports = React.createClass({
   displayName: 'nw-slider',
   propTypes: {
-    value: React.PropTypes.number,
-    min: React.PropTypes.number,
-    max: React.PropTypes.number,
-    ticks: React.PropTypes.bool,
-    onChange: React.PropTypes.func,
-    onDragStart: React.PropTypes.func,
-    onDragEnd: React.PropTypes.func,
-    triggerOnChangeWhileDragging: React.PropTypes.bool,
-    markerLabel: React.PropTypes.array,
-    displayFollowerPopover: React.PropTypes.bool
+    value: PropTypes.number,
+    min: PropTypes.number,
+    max: PropTypes.number,
+    ticks: PropTypes.bool,
+    onChange: PropTypes.func,
+    onDragStart: PropTypes.func,
+    onDragEnd: PropTypes.func,
+    triggerOnChangeWhileDragging: PropTypes.bool,
+    markerLabel: PropTypes.array,
+    displayFollowerPopover: PropTypes.bool
   },
 
   getInitialState: function () {

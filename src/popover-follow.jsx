@@ -1,15 +1,16 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
+var PropTypes = require('prop-types')
 var isUndefined = require('lodash/isUndefined')
 
 module.exports = React.createClass({
   displayName: 'popover-follow',
 
   propTypes: {
-    position: React.PropTypes.number,
-    value: React.PropTypes.number,
-    trackWidth: React.PropTypes.number,
-    handleWidth: React.PropTypes.number
+    position: PropTypes.number,
+    value: PropTypes.number,
+    trackWidth: PropTypes.number,
+    handleWidth: PropTypes.number
   },
 
   getDefaultProps: function () {
