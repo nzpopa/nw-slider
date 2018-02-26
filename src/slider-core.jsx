@@ -5,8 +5,9 @@ var isFunction = require('lodash/isFunction')
 var Draggable = require('react-draggable')
 var isUndefined = require('lodash/isUndefined')
 var throttle = require('lodash/throttle')
+var createReactClass = require('create-react-class');
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   displayName: 'core-slider',
 
   propTypes: {

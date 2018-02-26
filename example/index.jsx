@@ -2,8 +2,10 @@
  * Dependencies
  */
 var React = require('react')
+var PropTypes = require('prop-types');
 var ReactDOM = require('react-dom')
 var Slider = require('../src/slider')
+var createReactClass = require('create-react-class');
 require('../src/slider.less')
 require('./index.less')
 
@@ -28,11 +30,11 @@ var updateSliderMax = function (max) {
   render()
 }
 
-var Index = React.createClass({
+var Index = createReactClass({
   displayName: 'Index',
 
   propTypes: {
-    config: React.PropTypes.object
+    config: PropTypes.object
   },
   getInitialState: function () {
     return {
@@ -72,6 +74,7 @@ var Index = React.createClass({
 
   handleSliderChange: function (value, position) {
     updateSliderValue(value)
+    console.log(value, position);
   },
 
   updateBool: function (key) {
